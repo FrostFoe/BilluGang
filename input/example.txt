@@ -1,0 +1,75 @@
+:K3V1N:
+@FrostFoe,  
+the server's down. -->0.5  
+What’s going on?
+
+:FrostFoe:
+Oh, you know...  
+just some "extra" traffic. -->3  
+Big day for the internet.  
+
+:K3V1N:
+Traffic?  
+This is insane. -->1  
+Are you attacking me?
+
+:FrostFoe:
+Attack?  
+Nah...  
+just a little bot parade. -->0.5  
+
+:K3V1N:
+A parade?  
+This feels like war. -->1  
+Are you behind this?
+
+:FrostFoe:
+Behind?  
+Me?  
+Nah. -->0.5  
+I’m just watching.
+
+:K3V1N:
+I swear,  
+this is you. -->1  
+Are you sure?
+
+:FrostFoe:
+Sure?  
+Of course.  
+Nothing to see here. -->0.5  
+
+:K3V1N:
+Something’s off.  
+I’m not buying it. -->0.5  
+Is it you?
+
+:FrostFoe:
+Me?  
+Why would I do that? -->1  
+Just enjoying the chaos.
+
+:K3V1N:
+You’re acting weird.  
+I know it’s you. -->0.5  
+
+:FrostFoe:
+Weird?  
+I’m just... chilling. -->0.5  
+No attacks here.
+
+:K3V1N:
+Alright, fine.  
+It’s you. -->2  
+
+:FrostFoe:
+I didn’t say a word.  
+But... you got it. -->0.5  
+
+:K3V1N:
+This isn’t over.  
+I’ll get you. -->1  
+
+:FrostFoe:
+Try.  
+You’ll need luck. -->0.5
