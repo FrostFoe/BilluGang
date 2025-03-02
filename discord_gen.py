@@ -60,7 +60,7 @@ def main():
     parser.add_argument('-i', '--input', help='Input file path', required=True)
     parser.add_argument('-c', '--clear', help='Delete output folder', action='store_true')
     parser.add_argument('-m', '--movie', help='Generate movie', action='store_true')
-    
+
     args = parser.parse_args()
 
     project_name = os.path.splitext(os.path.basename(args.input))[0]
@@ -69,26 +69,20 @@ def main():
     clear = args.clear
     movie = args.movie
 
-    # Check if the input file exists
     if not os.path.exists(input_file):
         print(f"Error: Input file '{input_file}' not found.")
         return
 
-    # Check if the output folder exists, create it if not
-    # If the flag is set, delete the output folder
     if clear and os.path.exists(output_folder):
         shutil.rmtree(output_folder)
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
 
-    # Read input file
     with open(input_file, encoding="utf8") as f:
         lines = f.read().splitlines()
 
-    # Get messages block
     messages_block = get_block_of_messages(lines)
 
-    # Generate messages of each block
     for i, message_block in enumerate(messages_block):
         generate_images_for_each_block(i, message_block, output_folder)
 
@@ -109,7 +103,7 @@ def generate_images_for_each_block(block_number, message_block, output_folder):
         generate_image(block_number, user, time_of_message, lines, output_folder)
 
 def generate_image(block_number, user, time_of_message, lines, output_folder):
-    
+
     global image_number
     global movie
     global clips
@@ -120,10 +114,9 @@ def generate_image(block_number, user, time_of_message, lines, output_folder):
                                + (LINE_HEIGHT * (len(lines) - 1))
                                + calculate_imported_images_height(lines)), 
                          color=define_background_color(lines))
-    
+
     message_position = [MESSAGE_X, MESSAGE_Y_INIT];
 
-    # Draw the messages
     for i, line in enumerate(lines):
         line = line.split('-->')[0];
         if line[0] == '@':
@@ -140,7 +133,7 @@ def generate_image(block_number, user, time_of_message, lines, output_folder):
             with Pilmoji(template) as pilmoji:
                 pilmoji.text(message_position, line.strip(), MESSAGE_FONT_COLOR, font=MESSAGE_FONT)
             message_position[1] += MESSAGE_DY
-    
+
     generate_profile_picture_name_time(template, user, time_of_message)
 
     draw = ImageDraw.Draw(template)
@@ -188,22 +181,18 @@ def generate_line_with_mention(message_position, template, i, line, full_mention
     user_text_width = text_bbox[2] - text_bbox[0]
     user_text_height = text_bbox[3] - text_bbox[1]
     text_x, text_y = message_position
-    
-    # Mention rectangle
-    
-    # Background full line
+
     draw.rectangle((LINE_MENTION_WIDTH,  message_position[1], 
                    IMAGE_WIDTH, message_position[1] + (MESSAGE_DY * 0.85)), 
                    fill=BACKGROUND_MENTION_COLOR)
-    # Left line
+
     draw.rectangle((0,  message_position[1], 
                     LINE_MENTION_WIDTH, message_position[1] + (MESSAGE_DY * 0.85)), 
                     fill=LINE_MENTION_COLOR)
-    # Background name
+
     user_mention_position = (text_x, text_y+10, text_x + user_text_width, text_y + user_text_height + 12)
     draw.rectangle(user_mention_position, fill=MENTION_BACKGROUND_COLOR)
-    
-    # Draw the text on the rectangle
+
     with Pilmoji(template) as pilmoji:
         pilmoji.text(message_position, user_ref, MENTION_COLOR, font=NAME_FONT)
         pilmoji.text(
@@ -213,13 +202,13 @@ def generate_line_with_mention(message_position, template, i, line, full_mention
 def generate_profile_picture_name_time(template, user, time_of_message):
     profile_folder = "profiles"
     files = os.listdir(profile_folder)   
-    pattern = re.compile(rf'{user}-(\w+\_\w+\_\w+)\.jpeg')
+    pattern = re.compile(rf'{user}-(\w+\_\w+\_\w+)\.png')
     matching_files = [file for file in files if pattern.match(file)]
     if matching_files:
         filename = matching_files[0]
         name_color = tuple(map(int, filename.split('-')[1].split('.')[0].split('_')))
     else:
-        filename = f'{user}.jpeg'
+        filename = f'{user}.png'
         name_color = NAME_FONT_COLOR
 
     profile_picture = Image.open(os.path.join(profile_folder, filename))
@@ -229,7 +218,6 @@ def generate_profile_picture_name_time(template, user, time_of_message):
     draw.ellipse([(0, 0), (PROFILE_PIC_WIDTH, PROFILE_PIC_WIDTH)], fill=255)
     template.paste(profile_picture, (36, 45), mask)
 
-    # Draw the name
     draw_name = ImageDraw.Draw(template)
     draw_name.text(NAME_POSITION, user, name_color, font=NAME_FONT)
 
@@ -251,14 +239,14 @@ def get_block_of_messages(lines):
             messages.append(datetime.datetime.now().strftime("%H:%M"))
         else:
             messages.append(line)
-    
+
     if messages:
         messages_block.append(messages)
-    
+
     return messages_block
 
 def define_background_color(lines):
-    # Check if there is  mention in the first line
+
     if is_full_mention(lines):
         return BACKGROUND_MENTION_COLOR
     return BACKGROUND_COLOR

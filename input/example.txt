@@ -1,75 +1,74 @@
-:K3V1N:
-@FrostFoe,  
-the server's down. -->0.5  
-What’s going on?
+:Meow:
+@Beluga, are you sure? -->0.5
+Selling YouTube to you? -->1
+That’s a *huge* deal. -->1
 
-:FrostFoe:
-Oh, you know...  
-just some "extra" traffic. -->3  
-Big day for the internet.  
+:Beluga:
+Trust me, I got it. -->0.5
+I’m gonna make YouTube... -->1
+Legendary. -->0.5
 
-:K3V1N:
-Traffic?  
-This is insane. -->1  
-Are you attacking me?
+:Meow:
+Legendary? You mean *good*? -->1
+Like actual *good* content? -->1
 
-:FrostFoe:
-Attack?  
-Nah...  
-just a little bot parade. -->0.5  
+:Hecker:
+Yeah, good content. -->0.5
+Not *chaos*! -->0.5
 
-:K3V1N:
-A parade?  
-This feels like war. -->1  
-Are you behind this?
+:Beluga:
+Watch and learn. -->1
+I’m giving MY channel... -->0.5
+1 BILLION subs! -->1
 
-:FrostFoe:
-Behind?  
-Me?  
-Nah. -->0.5  
-I’m just watching.
+:Meow:
+WHAT?! NOOOO!! -->1
+You can’t just do that! -->1
 
-:K3V1N:
-I swear,  
-this is you. -->1  
-Are you sure?
+:Hecker:
+1 BILLION?! What the heck?! -->0.5
+You ruined *everything*! -->1
 
-:FrostFoe:
-Sure?  
-Of course.  
-Nothing to see here. -->0.5  
+:Beluga:
+Oh, I didn’t ruin it. -->0.5
+I *transformed* YouTube! -->1
+Who needs organic growth? -->0.5
+I’ve got 1B subs! -->1
 
-:K3V1N:
-Something’s off.  
-I’m not buying it. -->0.5  
-Is it you?
+:Meow:
+This isn’t transformation! -->0.5
+This is *madness*! -->1
+You broke everything! -->1
 
-:FrostFoe:
-Me?  
-Why would I do that? -->1  
-Just enjoying the chaos.
+:Hecker:
+Now, everyone thinks... -->0.5
+I helped you! -->1
+You gave yourself... -->0.5
+1B subs! That’s not... -->1
+*normal*! -->0.5
 
-:K3V1N:
-You’re acting weird.  
-I know it’s you. -->0.5  
+:Meow:
+We need to fix this! -->0.5
+This isn’t how it works! -->1
 
-:FrostFoe:
-Weird?  
-I’m just... chilling. -->0.5  
-No attacks here.
+:Beluga:
+*I* am YouTube now! -->0.5
+Welcome to *BelugaTube*! -->1
 
-:K3V1N:
-Alright, fine.  
-It’s you. -->2  
+:Meow:
+BelugaTube?! What happened?! -->0.5
+You’ve destroyed everything!! -->1
 
-:FrostFoe:
-I didn’t say a word.  
-But... you got it. -->0.5  
+:Hecker:
+This is the worst! -->1
+*He’s* ruined YouTube! -->1
+Now, we’re stuck with *him*! -->0.5
 
-:K3V1N:
-This isn’t over.  
-I’ll get you. -->1  
+:Beluga:
+You guys are jealous! -->0.5
+I’ve got 1 BILLION subs! -->1
+Let the chaos... begin! -->1
 
-:FrostFoe:
-Try.  
-You’ll need luck. -->0.5
+:Meow:
+*I* need to fix this! -->0.5
+*NOW*! -->0.5
